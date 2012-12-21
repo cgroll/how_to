@@ -1,0 +1,46 @@
+#+TITLE: Records on how to efficiently use the computer
+
+* Structure
+
+- divided according to thematic subjects
+- main header for thematic subject shall entail uppercase SECTION,
+  which can be easily identified in search lists
+- each emacs-related thematic section shall have a subheader with
+  keyword SHORTCUTS where important emacs shortcuts are stored 
+- external shortcut reference-cards shall be linked to in oracle
+- at best, each sub-header should contain thematic header tags as
+  well, in order to enable searching text bodies of headlines with
+  given TAG in header: e.g., search all "R" and "ESS" tagged
+  headlines for regexp "*hist*" (to find get.hist.quote)
+- if sub-headers fail to entail tags, then searching in related
+  subtree could be achieved by
+  - follow refile targets (C-u C-x C-w) to related subtree
+  - perform subtree-restricted search
+* bookmark SECTION                                           :bookmark:emacs:
+- bookmarks are stored in ~/.emacs.bmk -> synced via Dropbox through
+  symbolic link
+- bookmarks are shown at start-up
+- bookmarks can be extended with recently open files with 'recentf-open-files
+
+** bookmark SHORTCUTS                                        :bookmark:scuts:
+   :PROPERTIES:
+   :type:     scut
+   :END:
+| Shortcut          | description                                                                  |
+|-------------------+------------------------------------------------------------------------------|
+| C-x r m           | set bookmart for visited file at point                                       |
+| C-x r b           | Jump to the bookmark named bookmark (bookmark-jump).                         |
+| C-x r B           | bookmark-jump-other-window                                                   |
+| C-x r l           | List all bookmarks (list-bookmarks).                                         |
+| M-x bookmark-save | save bookmarks                                                               |
+| C-t b             | show list of recently opened files                                           |
+| a                 | show annotation for the current bookmark                                     |
+| A                 | show all annotations for your bookmarks                                      |
+| d                 | mark various entries for deletion (‘x’ – to delete them)                     |
+| e                 | edit the annotation for the current bookmark                                 |
+| m                 | mark various entries for display and other operations, (‘v’ – to visit)      |
+| o                 | visit the current bookmark in another window, keeping the bookmark list open |
+| C-o               | switch to the current bookmark in another window                             |
+| r                 | rename the current bookmark                                                  |
+
+
