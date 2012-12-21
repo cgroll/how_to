@@ -31,6 +31,7 @@
 | C-x r m           | set bookmart for visited file at point                                       |
 | C-x r b           | Jump to the bookmark named bookmark (bookmark-jump).                         |
 | C-x r B           | bookmark-jump-other-window                                                   |
+| C-M-ü             | bookmark-jump-other-window                                                                |
 | C-x r l           | List all bookmarks (list-bookmarks).                                         |
 | M-x bookmark-save | save bookmarks                                                               |
 | C-t b             | show list of recently opened files                                           |
@@ -44,3 +45,48 @@
 | r                 | rename the current bookmark                                                  |
 
 
+* git SECTION
+** import EXISTING code to GITHUB                                       :git:
+instructions to add local source code to new git repository:
+- create your remote empty repository in bitbucket/github and get the
+  URL such as git://github.com/youruser/somename.git
+- if local git repo is not set up yet:
+- at root directory of your source: git init
+- locally, add and commit to your initial repo 
+  - for everything:
+    - git add .
+    - git commit -m 'initial commit comment'
+- to attach your remote repo with name 'origin' (like cloning would
+  do):
+  - git remote add origin [URL From Step 1]
+  - git pull origin master (if readme file or anything else has
+    already been set up, in order to merge code) 
+  - to push up your master branch:
+    git push origin master
+
+* search / jump / goto content                              :emacs:org:occur:
+description of several ways of finding contents in emacs:
+- in main files: 
+  - treat most important files as org-agenda-files
+  - look for content in body of header with TAGS:
+    - C-c a s (org-search-view): +:TAG1 :TAG2 CONTENT
+      - requirement: header must have TAG itself -> inheritance not
+        allowed
+    - C-c a s: CONTENT, with TAG-restrictions applied afterwards
+      - enable filtering with "/"
+    - restricted search on subtree:
+      - find subtree via org-refile: C-u C-c C-w
+      - restrict search: C-c a <
+      - press s for search
+  - C-c a s: search regexp in all agenda files plus additional search
+    files, show superior header as search results
+  - C-c a /: search regexp in all agenda files, show exact lines of
+    occurrences
+- generally in multiple files:
+  - multi-occur: show regexp search in chosen files
+    - C-c C-f: enable next-error-follow-mode
+    - goto next error: C-t n
+- search for tags and properties in multiple files:
+  - C-c a m: org-tags-view
+- search for tags and properties in current file:
+  - C-c / m: org-match-sparse-tree
