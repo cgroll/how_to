@@ -90,3 +90,16 @@ description of several ways of finding contents in emacs:
   - C-c a m: org-tags-view
 - search for tags and properties in current file:
   - C-c / m: org-match-sparse-tree
+* save multiplot picture in R                                   :multiplot:R:
+pdf("filename", width = 30, height = 15)
+multiplot(p1, p2, p3, p4, cols=2)
+dev.off()
+   
+png("filename", width = 1400, height = 700)
+multiplot(p1, p2, p3, p4, cols=2)
+dev.off()
+* save ggplot with ggsave                                          :ggsave:R:
+ggsave(p1,file="filename", width=15, height = 10,
+      units = "cm")
+ggsave(p1,file="filename", width=15, height = 10,
+      units = "cm") 
