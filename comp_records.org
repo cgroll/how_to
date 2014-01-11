@@ -59,8 +59,10 @@ instructions to add local source code to new git repository:
 - to attach your remote repo with name 'origin' (like cloning would
   do):
   - git remote add origin [URL From Step 1]
-  - git pull origin master (if readme file or anything else has
+  - if branch already exists in remote repo: 
+    git pull origin master (if readme file or anything else has
     already been set up, in order to merge code) 
+  - if no branch exists yet: git push -u origin --all
   - to push up your master branch:
     git push origin master
 
