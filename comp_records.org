@@ -1,21 +1,4 @@
-#+TITLE: Records on how to efficiently use the computer
 
-* Structure
-
-- divided according to thematic subjects
-- main header for thematic subject shall entail uppercase SECTION,
-  which can be easily identified in search lists
-- each emacs-related thematic section shall have a subheader with
-  keyword SHORTCUTS where important emacs shortcuts are stored 
-- external shortcut reference-cards shall be linked to in oracle
-- at best, each sub-header should contain thematic header tags as
-  well, in order to enable searching text bodies of headlines with
-  given TAG in header: e.g., search all "R" and "ESS" tagged
-  headlines for regexp "*hist*" (to find get.hist.quote)
-- if sub-headers fail to entail tags, then searching in related
-  subtree could be achieved by
-  - follow refile targets (C-u C-x C-w) to related subtree
-  - perform subtree-restricted search
 * bookmark SECTION                                           :bookmark:emacs:
 - bookmarks are stored in ~/.emacs.bmk -> synced via Dropbox through
   symbolic link
@@ -44,27 +27,6 @@
 | C-o               | switch to the current bookmark in another window                             |
 | r                 | rename the current bookmark                                                  |
 
-
-* git SECTION
-** import EXISTING code to GITHUB                                       :git:
-instructions to add local source code to new git repository:
-- create your remote empty repository in bitbucket/github and get the
-  URL such as git://github.com/youruser/somename.git
-- if local git repo is not set up yet:
-- at root directory of your source: git init
-- locally, add and commit to your initial repo 
-  - for everything:
-    - git add .
-    - git commit -m 'initial commit comment'
-- to attach your remote repo with name 'origin' (like cloning would
-  do):
-  - git remote add origin [URL From Step 1]
-  - if branch already exists in remote repo: 
-    git pull origin master (if readme file or anything else has
-    already been set up, in order to merge code) 
-  - if no branch exists yet: git push -u origin --all
-  - to push up your master branch:
-    git push origin master
 
 * search / jump / goto content                              :emacs:org:occur:
 description of several ways of finding contents in emacs:
